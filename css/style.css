@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+}
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.lander {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-image:url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  margin-bottom: 7rem;
+  animation: blurin 3s;
+}
+
+.lander h1 {
+  text-align: center;
+  background: radial-gradient(circle, #095256ff 0%, #087f8cff 25%, #5aaa95ff 50%, #86a873ff 75%);
+  font-size: 4.2rem;
+  background-clip: text, border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 400%;
+  animation: gradient 10s linear infinite alternate;
+  margin-bottom: 20px;
+  font-size: 8rem;
+  filter: drop-shadow(2px 2px 5px #86a873);
+}
+
+@keyframes blurin{
+  from{
+      filter: blur(8px);
+  }
+  to{
+      filter: blur(0px);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}
+
+.section2 {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.section2-sections {
+  height: 49%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.section2-img {
+  height: 100%;
+  width: 29%;
+  display: inline-block;
+  flex: 1;
+}
+
+.section2-img img {
+  height: 100%;
+  width: 100%;
+  object-fit:contain;
+}
+
+.section2-text {
+  display: inline-block;
+  flex: 1;
+  justify-content: center;
+}
+
+.section2-text h4 {
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  font-size: larger;
+  padding-top: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
