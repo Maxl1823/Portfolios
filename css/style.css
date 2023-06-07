@@ -1,13 +1,17 @@
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   font-family: "Lato";
 }
+
+/* Set body width and hide horizontal overflow */
 html {
   width: 100vw;
   overflow-x: hidden;
 }
 
+/* Lander section styles */
 .lander {
   width: 100vw;
   height: 100vh;
@@ -15,7 +19,7 @@ html {
   justify-content: center;
   text-align: center;
   align-items: center;
-  background-image:url("../images/background.png");
+  background-image: url("../images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -37,12 +41,12 @@ html {
   filter: drop-shadow(2px 2px 5px #86a873);
 }
 
-@keyframes blurin{
-  from{
-      filter: blur(8px);
+@keyframes blurin {
+  from {
+    filter: blur(8px);
   }
-  to{
-      filter: blur(0px);
+  to {
+    filter: blur(0px);
   }
 }
 
@@ -50,22 +54,21 @@ html {
   0% {
     background-position: 0%;
   }
-
   100% {
     background-position: 100%;
   }
 }
 
+/* Section 2 styles */
 .section2 {
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
 }
 
 .section2-sections {
   height: 49%;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
 }
 
@@ -76,25 +79,51 @@ html {
   flex: 1;
 }
 
-.section2-img img {
-  height: 100%;
-  width: 100%;
-  object-fit:contain;
+.section2-img1 img {
+  height: 99%;
+  width: 99%;
+  object-fit: contain;
+  float: left;
+  padding-left: 15%;
+}
+
+.section2-img2 img {
+  height: 99%;
+  width: 99%;
+  object-fit: contain;
+  float: right;
+  padding-right: 15%;
+}
+
+.section2 img {
+  transition: filter 0.3s ease;
+}
+
+.section2 img:hover {
+  filter: blur(2px);
 }
 
 .section2-text {
+  color: black;
   display: inline-block;
   flex: 1;
   justify-content: center;
+  transition: color 1s, animation 0.3s ease, transform 0.3s ease;
 }
 
-.section2-text h4 {
-  height: auto;
-  width: auto;
-  display: flex;
+.section2-text:hover {
+  color: #087f8c;
+  transform: translateY(-10px);
+}
+
+.section2-text h4,
+.section2-text h3 {
+  display: flex !important;
   align-items: center;
-  font-size: larger;
-  padding-top: 20%;
+  height: 49.9%;
+  width: 70%;
+  font-size: x-large;
+  padding-top: 125px;
   padding-left: 10%;
   padding-right: 10%;
 }
